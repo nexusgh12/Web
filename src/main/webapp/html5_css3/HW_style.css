@@ -1,0 +1,35 @@
+@charset "UTF-8";
+#outline{
+    width: 320px;
+    height: 106px;
+    border: 1px solid #d4d4d4;
+    background-color: #fbfbfb;
+    font-size: 12px;
+}
+
+a:link { color: #3b3b3b; text-decoration: none;}
+a:visited { color: #3b3b3b; text-decoration: none;}
+a:hover { color: #3b3b3b; text-decoration: underline;}
+
+#checkboxlink{
+    margin-left: 15px;
+}
+#login{
+    margin-left: 15px;
+}
+#ID, #PASSWD{
+    border: 1px solid #d4d4d4;
+    height: 22px;
+    width: 200px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+.option02{
+    margin-left: 5px;
+}
+#btnLOGIN{
+    height: 51px;
+    width: 70px;
+    background-color: #ffffff;
+    border: 1px solid #d4d4d4;
+}

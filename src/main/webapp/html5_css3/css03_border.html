@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 200px;
+            height: 300px;
+        }
+        /*
+            border-style : 선의 모양(solid: 실선, dotted: 줄선, double : 이중선, none, groove : 음각, inset : 양각)
+            border-width : 선의 두께(px)
+            border-color : 선의 색상(rgb)
+        */
+        #i1 {
+            border-style: solid; /*border-top-style, border-right-style,border-bottom-style,border-left-style*/
+            border-width: 5px;
+            border-color: red;
+        }
+        #i2{
+            border-top: 5px red double;
+        }
+
+        #i3{
+            border: dashed 5px orange;
+        }
+
+        #i4{
+            border: 5px solid;
+            border-color:red;
+            border-radius: 10px 30px;
+
+        }
+    </style>
+
+</head>
+<body>
+<a href="../index.html">홈</a><br/>
+<img src="../img/01.PNG " id=i1>
+<img src="../img/02.PNG" id=i2>
+<img src="../img/03.PNG" id=i3>
+<img src="../img/04.PNG" id=i4>
+</body>
+</html>

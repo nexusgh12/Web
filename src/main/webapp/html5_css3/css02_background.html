@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background</title>
+    <style>
+    /*
+        background-color : 배경색
+        background-image : 배경 이미지
+        background-repeat : 반복 방향, 반복 여부 설정
+                            repteat (기본), no-repeat, repeat-x, repeat-y
+        background-position : 배경이미지의 위치
+        (left, center, right, top, bottom, middle, 백분율)
+        background-attachment : fixed, scroll(기본)
+        background-size : 배경 이미지의 크기(백분율, px)
+    */
+    body {
+        /*background-image: url("/img/안녕히계세요.jpg");*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: 50% 30%;*/
+        /*background-attachment: fixed;*/
+
+        /*스타일 시트 속성 그룹화*/
+        background: #ddd url("/img/안녕히계세요.jpg") no-repeat fixed;
+        background-size: 300px 300px;
+        background-position: 50% 30%;
+
+    }
+
+    </style>
+</head>
+<body>
+<h1>Background 속성</h1>
+
+<a href="../index.html">홈</a><br/>
+<img src="/img/penguin.jpg" width="300px"/><br/>
+<img src="/img/penguin.jpg"/><br/>
+<img src="/img/penguin.jpg"/><br/>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false" onselectstart="return false" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*구조 선택자
+            2n : 짝수 번째 객체, 2n+1 : 홀수 번째 객체, 3n : 3의 배수의 번째 객체 선택
+            :nth-child()
+        */
+        #lst>li:nth-child(3n){
+            background-color: pink;
+        }
+        #lst>li:first-child{
+            color: orange;
+        }
+        #lst>li:last-child{
+            color: blue;
+            font-size: 1.2em;
+        }
+        body{margin: 30px}
+    /* 그림자 설정 */
+        #lst>li{
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            border: 1px solid #bbb;
+        }
+    /*박스 또는 글자에 그림자표시*/
+        #lst>li{
+            /*          오른쪽 아래쪽 투명 색상*/
+            box-shadow: 10px 5px 5px #ddd;
+        }
+
+        #lst>li{
+            text-shadow: 5px 5px 5px green;
+        }
+        #txt{
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ebe9f9+0,d8d0ef+50,cec7ec+51,c1bfea+100;Purple+3D+%231 */
+            background: #ebe9f9; /* Old browsers */
+            background: -moz-linear-gradient(top,  #ebe9f9 0%, #d8d0ef 50%, #cec7ec 51%, #c1bfea 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #ebe9f9 0%,#d8d0ef 50%,#cec7ec 51%,#c1bfea 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #ebe9f9 0%,#d8d0ef 50%,#cec7ec 51%,#c1bfea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#c1bfea',GradientType=0 ); /* IE6-9 */
+        }
+    </style>
+</head>
+<!--
+    html 속성
+    oncontextmenu : 마우스 오른쪽 키 사용 제어
+    onselectstart : 선택 시작 불가능
+    ondragstart : 드래그 시작 불가능
+-->
+<body>
+<a href="../index.html">홈</a><br/>
+<ul id="lst">
+    <li>맨드라미</li>
+    <li>장미</li>
+    <li>코스모스</li>
+    <li>민들레</li>
+    <li>해바라기</li>
+    <li>히야신스</li>
+</ul>
+<style>
+    /*구조 선택자
+    :first-of-type : 처음 객체
+    :last-of-type : 마지막 객체
+    :nth-of-type(2n): 2n 짝수번째, 2n+1: 홀수 번쨰*/
+    #lst2>li:nth-of-type(2n){
+        background: yellow;
+    }
+    #lst2>li:nth-of-type(2n+1){
+        background: orange;
+    }
+    #lst2>li:first-of-type{
+        font-size: 2em;
+    }
+    #lst2>li:last-of-type{
+        color: green;
+    }
+
+</style>
+<ul id="lst2">
+    <li>맨드라미</li>
+    <li>장미</li>
+    <li>코스모스</li>
+    <li>민들레</li>
+    <li>해바라기</li>
+    <li>히야신스</li>
+</ul>
+
+<style>
+    /*텍스트 스타일
+    ::first-letter : 문단의 첫번째 글자에 스타일 적용
+    ::first_line : 문단의 첫번째 줄에 스타일 적용
+    */
+    #txt:first-letter{
+        font-size: 2em;
+        background: pink;
+        font-weight: bold;
+        color: red;
+    }
+    #txt::first-line{
+        text-decoration: underline;
+    }
+    #txt::selection{
+        color: red;
+        background: #000;
+    }
+</style>
+<div id="txt">
+    맨체스터 유나이티드가 크리티아누 호날두와 결별할 준비를 한다. 대체 선수까지 낙점했다.
+    영국 공영방송 'BBC'가 7일(한국시간) 유럽 축구 가십을 다루는 코너에서 "호날두 대체 선수로 22세 레알 소시에다드 공격수 알렉산데르 이삭을 지켜보고 있다"고 알렸다.
+    호날두 결별설은 처음이 아니다. 영국 '미러'에서는 충격적인 '선수↔감독 스왑딜'까지 거론했다. 맨체스터 유나이티드는 마우리시오 포체티노 감독을 원하고, 파리 생제르맹이 오랜 시간 호날두를 주시했던 만큼, 올해 여름에 호날두를 보내고 포체티노 감독을 선임하려는 생각이다.
+</div>
+
+</body>
+</html>

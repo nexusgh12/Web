@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.title="자바스크립트제목";
+        document.write("body에 출력할 문자를 표시한다.");
+        //한줄 주석
+        /*
+        * 여러 줄 주석
+        * */
+
+        //자바 스크립트에서 태그 사용하기
+        document.write('<h1 id="txt">자바스크립트에서 태그 사용하기</h1>');
+        document.write("<h1>자바스크립트에서 태그 사용하기</h1>");
+        for (var i = 1; i < 5; i++) {
+            document.write("<img src='../img/0"+i+".PNG'/>");
+        }
+    </script>
+</head>
+<body>
+<h1 id="heading1">html영역</h1>
+<h1 id="heading2">html영역</h1>
+<script>
+    document.write("자바 스크립트 실행됨.");
+
+    //html의 아이디 heading1에 스타일을 적용한다.
+    document.getElementById("heading1").style.background="pink";
+    document.getElementById("txt").style.border = "2px solid red";
+
+    document.querySelector("#heading2").style.backgroundImage="url(../img/penguin.jpg)"
+</script>
+</body>
+</html>

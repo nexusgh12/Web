@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-sale=1"/>
+    <style>
+        body,ul,li{margin:0; padding:0px; list-style-type:none;}
+        img{width:50%; height:200px;}
+        body{
+            background-color:#ddd;
+        }
+        li{
+            background-color:#fff;
+            border:1px solid gray;
+            margin:5px;
+        }
+
+        /*반응형 스타일 적용하기*/
+        /*320px ~ 600px*/
+        /*      all, screen,  print, tv, projection......*/
+
+        @media all and (min-width:320px) and (max-width: 600px){
+            li{background: yellow}
+            img{width: 100%}
+        }
+
+        /*601px~800px 일때 스타일*/
+        @media all and (min-width:601px) and (max-width:800px){
+            li{background:#000;color: #f00;}
+            img{width: 30%}
+        }
+        /*601px~800px 일때 스타일*/
+        @media all and (min-width:901px){
+            li{background:pink;color: green; font-weight: bold}
+            img{width: 20%}
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>인도와 유럽이 올해 글로벌 스마트폰 시장 최대 격전지로 떠올랐다. 시장도 크고, 성장세도 크면서 확실한 패권 브랜드가 없는 ‘춘추전국시장’이어서다. </li>
+    <li>이에 따라 플래그십폰과 중저가 5세대(G) 통신 스마트폰 시장을 놓고 삼성과 애플, 중국 업체 간 치열한 마케팅 경쟁이 펼쳐질 전망이다.</li>
+    <li>7일 스마트폰 업계와 시장조사업체 등에 따르면, 지난해 인도 스마트폰 시장은 전년 대비 11% 증가한 1억6900만대를 기록했다. </li>
+    <li> 매출 기준으론 같은 기간 27% 늘었다. 특히 프리미엄폰과 5G폰 수요가 늘며 평균판매단가(ASP)가 전년 대비 14% 올랐다.</li>
+    <li> 그동안 저가폰 중심으로 평가받던 시장이 중저가·프리미엄폰으로 옮겨가고 있다는 얘기다.</li>
+    <li>수위 다툼이 치열했다. 지난해 인도 스마트폰 시장은 샤오미(24%), 삼성(18%), 비보(15%), 리얼미(14%), 오포(10%) 순이었다. 샤오미와 삼성은 전년 대비 각각 2%포인트, 3%포인트 점유율이 하락했다.</li>
+    <li>애플의 선전이 주목을 받는다. 지난해 애플은 인도 시장에서 출하량을 전년 대비 100% 넘게 늘렸다. 특히 3만 루피(400달러) 이상 프리미엄폰 시장에서 점유율 44%로 선두였다.</li>
+</ul>
+<img src="/img/penguin.jpg"/>
+<img src="/img/안녕히계세요.jpg" />
+</body>
+</html>

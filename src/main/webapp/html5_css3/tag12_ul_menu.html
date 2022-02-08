@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        ul, li, body {
+            margin: 0;
+            padding: 0px;
+        }
+
+        #menu {
+            background-color: yellow;
+            overflow: auto;/*컨텐츠만큼 공간을 확보한다.*/
+            list-style-type: none;
+        }
+        #menu>li {
+            background-color: pink;
+            float: left;
+            width: 25%;
+            height: 50px;
+
+            text-align: center;
+            line-height: 50px;
+            font-size: 2em;/* 폰트 단위(기본 크기 : 16px) : px, pt, %, mm, cm, in, em*/
+            font-family:  'Jua', sans-serif;
+        }
+        /*
+        link: 링크, hover : 마우스 오버, visited : 방문했을 때, active : 누른 상태일때
+
+        text-decoration -> underline : 밑줄, overline : 윗줄, line-through : 취소선, none : 선없음
+
+        */
+        #menu a:link, #menu a:visited  {
+        text-decoration: none; color: gray;
+        }
+        #menu a:hover {
+            text-decoration: none; color: red; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<a href="../index.html">홈</a><BR/>
+<ul id="menu">
+    <li><a href="#">TV</a></li>
+    <li><a href="#">여행/맛집</a></li>
+    <li><a href="#">푸드</a></li>
+    <li><a href="#">만화/웹툰</a></li>
+</ul>
+<style>
+    img{border: 5px solid red;}
+</style>
+<img src="/img/01.PNG"/>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function htmlCtr(){
+            // document.getElementById("i").src="../img/안녕히계세요.jpg";
+            // document.getElementById("i").style.border="3px solid red";
+            // document.getElementById("i").title="이미지에 마우스 오버중~~~";
+            var obj =  document.getElementById("i");
+            obj.src="../img/안녕히계세요.jpg";
+            obj.style.border="5px solid blue";
+            obj.title = "image 풍선 도움말~~";
+
+        }
+        function imgChange(){
+            document.getElementById("i").src="../img/penguin.jpg";
+        }
+    </script>
+</head>
+<body>
+<img src="/img/penguin.jpg" id="i" onmouseover="htmlCtr()" onmouseout="imgChange()"/>
+</body>
+</html>
