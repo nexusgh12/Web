@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+    function arraySortTest(){
+        var num = [54, 94, 12, 34, 52, 5, 3, 23, 11, 2];
+        var str = ['orange', 'banana', 'apple', 'pineapple', 'strawberry', 'mango', 'peach', 'tomato'];
+
+        //Ascending 정렬
+        //문자에 대한 오름차순 정렬
+        str.sort()
+        document.getElementById("strAscending").innerHTML = "strAscending-> "+ str+"<br/>";
+
+        //숫자에 대한 오름차순 정렬
+        num.sort(function (x, y) {
+            return x - y; //음수면 y가 크다, 양수면 x가 크다, 0이면 두개가 똑같다
+        });
+        document.querySelector("#numAsc").innerHTML="numAscending-> "+num;
+
+        //Descending 정렬
+        //문자에 대한 내림차순 정렬
+        //오름차순으로 정렬된 배열을 역순으로 바꾼다.
+        str.reverse();
+        document.getElementById("strDesc").innerHTML = "strAscending-> "+ str+"<br/>";
+        //숫자에 대한 내림차순 정렬
+        num.sort(function (x, y) {
+            return y - x; // 음수면 x가 크다. 양수일떄 y가 크다. 0이면 두개가 같다.
+        });
+        document.querySelector("#numDesc").innerHTML="numDescending-> "+num;
+
+    }
+</script>
+</head>
+<body onload="arraySortTest()">
+<div id="strAscending" ></div>
+<div id="numAsc"></div>
+<div id="strDesc"></div>
+<div id="numDesc"></div>
+<div></div>
+</body>
+</html>

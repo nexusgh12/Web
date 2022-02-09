@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function scrollTest() {
+            //현재 스크롤 바의 위치를 구한다.
+            var sX = window.scrollX;
+            var sY = window.scrollY;
+            console.log(sX, sY);
+
+        }
+
+        function scrollAutoMove(){
+            //scrollBy(x, y)
+            window.scrollBy(0, 1);
+        }
+        var x = 0;
+        var y = 0;
+
+        function backMove() {
+            document.body.style.backgroundPosition = x + "px " + y + "px";
+            x += 5;
+            y += 5;
+        }
+
+    </script>
+    <style>
+        body{
+            background: url("../img/안녕히계세요.jpg");
+        }
+    </style>
+
+</head>
+<!--<body onload="scrollTest(); setInterval('scrollAutoMove()', 3);">-->
+<body onload="setInterval('backMove()',500)">
+
+</body>
+</html>

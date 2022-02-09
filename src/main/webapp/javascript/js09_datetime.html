@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    //날짜 시간을 처리하는 함수
+
+    var now = new Date();
+    document.write("현재날짜와시간 ->" + now);
+
+    var date = new Date('2022.02.09');
+    var date2 = new Date(4567534345542315); // 밀리초
+
+    document.write("<br/>date ->" + date);
+    document.write("<br/>date2 ->" + date2);
+
+    /*
+        각각 date 값을 구하는 메서드
+		1. 연  : getFullYear()
+		2. 월  : getMonth()    ->0(1월), 1(2월),...
+		3. 일  : getDate()
+		4. 시  : getHours()
+		5. 분  : getMinutes()
+		6. 초  : getSeconds()
+		7. 요일 : getDay        -> 0(일), 1(월), 2(화),...
+     */
+
+    var y = now.getFullYear();
+    var m = now.getMonth();
+    var d = now.getDate();
+
+    var w = now.getDay();
+    var h = now.getHours();
+    var mi = now.getMinutes();
+
+    var week = "";
+    switch (w) {
+        case 0: week = "일";break;
+        case 1: week = "월";break;
+        case 2: week = "화";break;
+        case 3: week = "수";break;
+        case 4: week = "목";break;
+        case 5: week = "금";break;
+        case 6: week = "토";break;
+    }
+
+    document.write("<br/>", y, "-", m, "-", d, '(', week, ')', h, ":", mi);
+</script>
+<body>
+
+</body>
+</html>
