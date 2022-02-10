@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // location.href = "http://naver.com";
+        function pageReload(){
+            location.reload();
+        }
+
+        setInterval("pageReload()", 1000);
+    </script>
+<input type="button" value="포스트 슬라이드" onclick="location.href='./ex04_postMove.html'"/>
+
+<div>
+    <script>
+        document.write("protocol-> " + location.protocol+"<br/>"); //http, ftp
+        document.write("port->" + location.port+"<br/>");
+        document.write("hostname->" + location.hostname+"<br/>");
+        document.write("host->" + location.host+"<br/>");
+
+
+    </script>
+</div>
+</body>
+</html>
