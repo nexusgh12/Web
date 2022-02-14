@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //상태 선택자
+            //속성값이 text인 객체를 선택하기
+            $(":text").css("width", "300px").css("height","40px");
+
+            //checked 속성에 대한 선택자 - checked속성이 설정 되어있을 때 해제하는 기능
+            // $(":checked").attr("checked", false);
+            // $(":checked").prop("checked", false);
+
+            $(":selected").attr("selected, false");
+
+            //------------------------
+            //컨텐츠 선택자
+            //contains() : 특정 문자를 포함한 경우 선택한다.
+            $("p:contains('тому')").css("background-color", "black").css("color","red");
+
+            //has() : 특정 태그를 포함한 경우 선택한다.
+            $("p:has('b')").css('border','2px solid red');
+
+            //not() : 특정 선택자를 제외한 나머지를 선택한다.
+            $("p:not(:first)").css("color", "green");
+
+            //closest() : 조상 선택자
+            $("i").closest("body").css("border", "3px dotted green")
+
+            //filter
+            $("p").filter('.c1').css("color", "#fff").css("background-color","#000");
+
+            //contents() : 특정 선택자의 하위가 다른 태그가 포함된 경우 선택자
+            $("p").contents().css("color", "red");
+        });
+
+    </script>
+</head>
+<body>
+<div>
+    <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює <b>композицію</b> сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм верстування та веб-дизайну використовують Lorem Ipsum як зразок і пошук за терміном "lorem ipsum" відкриє багато веб-сайтів, які знаходяться ще в зародковому стані. Різні версії Lorem Ipsum з'явились за минулі роки, деякі випадково, деякі було створено зумисно (зокрема, жартівливі).</p>
+    <p class="c1">ما هو "لوريم إيبسوم"         لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.</p>
+    <p class="c1">无可否认，当读者在浏览一个页面的排版时，难免会被可阅读的内容所分散注意力。<i>Lorem Ipsum</i>的目的就是为了保持字母多多少少标准及平均的分配，而不是“此处有文本，此处有文本”，从而让内容更像可读的英语。如今，很多桌面排版软件以及网页编辑用Lorem Ipsum作为默认的示范文本，搜一搜“Lorem Ipsum”就能找到这些网站的雏形。这些年来Lorem Ipsum演变出了各式各样的版本，有些出于偶然，有些则是故意的（刻意的幽默之类的）。</p>
+
+</div>
+<div>
+    <form>
+        <label>이름</label>
+        <input type="text" name="username" id="username"/><br/>
+        <label>연락처</label>
+        <input type="text" name="tel" id="tel"/><br/>
+        <label>사용자 동의 여부</label>
+        <input type="radio" name="accept" value="yes" checked/>동의
+        <input type="radio" name="accept" value="no" checked/>비동의<br/>
+        <label>자주가는 사이트</label>
+        <select name="site" id="side">
+            <option value="not">==직접선택==</option>
+            <option value="daum" selected>daum.net</option>
+            <option value="nate" >nate.com</option>
+            <option value="naver" >naver.com</option>
+        </select>
+    </form></div>
+</body>
+</html>

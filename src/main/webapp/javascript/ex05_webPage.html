@@ -3,47 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <title>CatFind</title>
-    <style>
-        #header{
-            float: left;
-            position: relative;
+    <link href="catFind/css/fontStyle.css" rel="stylesheet">
+    <style media="screen">
+        div{
+            /*border : 1px solid #f6f7f8;*/
+            margin:5px;
+            padding:5px;
+            width: 90%;
+            height: 100%;
+            text-align: center;
         }
-        #logo{
-            float: left;
-            width: 5%;
+        hr{
+            border : 1px solid #f6f7f8;
+            margin-top: 0;
+            margin-bottom: 0;
         }
-        #search{
+        #con {
+            margin: 0 auto;
+            /*border: 1px solid #cccccc;*/
+        }
+
+        #header {
+            display: flex;
+            width: 98.2%;
+            height: 60%;
+            line-height: 60px;
+        }
+
+        #header>div{
             float: left;
+        }
+        #logoArea{
+            flex:30%;
+        }
+        #logoArea>a{
+            text-align: center;
+        }
+
+        #searchArea{
+            flex:50%;
+        }
+
+        #btnArea{
+            flex: 20%;
+            text-align: left;
+        }
+
+        #nav {
+            width: 98.2%;
+            height: 30px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        #nav ul{
+            overflow: hidden;
+            list-style-type: none;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        #nav ul  li {
+            /*border: 1px solid #cccccc;*/
+            width: 138px;
+            height: 30px;
+            text-align: center;
+            line-height: 40px;
+            font-family: jua,sans-serif;
+            font-size: 20px;
+            color: #f6ac93;
+            margin-right: 30px;
+            display: inline-block;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .subMenu{
+            margin: 0;
+            padding: 0;
+            border: 1px solid #cccccc;
+            background: #ffffff;
+            visibility: hidden;
+        }
+        #wrap{
+            overflow: hidden;
+            width: 98.2%;
+            display: flex;
+        }
+
+        #content {
+            flex:80%;
+            height: 300px;
+        }
+
+        #banner {
+            flex:20%;
+            height: 300px;
+
+        }
+
+        #footer{
+            width: 98.2%;
+            height: 100px;
+            line-height: 100px;
         }
 
     </style>
 </head>
 <body>
+<div id="con">
+
     <div id="header">
         <div id="logoArea">
-            <img src="catFind/logo.png" />
+            <a href="#" style="text-decoration: none; font-size: 35px; color: #f6ac93; font-family: Righteous"><img src="catFind/logo.png" width="45px" id="img_logo">CATFIND</a>
         </div>
-        <div id="titleArea">
-            <h1>CATFIND</h1>
+
+        <div id="searchArea">
+            <input type="text" id="txtSearch" style="width:90%; border-right:none;border-left:none;border-top:none;border-bottom: 1px solid #f6ac93; height:30px;">
         </div>
+
         <div id="btnArea">
-            <input type="text" id="btnSearch"/>
+            <button type="button" style="border: none; background: none;"><img src="catFind/icon_search.svg" alt="" width="30px"></button>
         </div>
-
-
     </div>
-
+<hr>
     <div id="nav">
+        <ul>
+            <li><a href="#" style="text-decoration: none; color: #f6ac93;">특가 랭킹</a>
+                <ul class="subMenu">
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">전자/IT</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">식품/영양</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">뷰티/패션</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">기타</a></li>
+                </ul>
+            </li>
+            <li><a href="#" style="text-decoration: none; color: #f6ac93;">후기</a>
+                <ul class="subMenu">
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">전자/IT</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">식품/영양</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">뷰티/패션</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">기타</a></li>
+                </ul>
+            </li>
+            <li><a href="#" style="text-decoration: none; color: #f6ac93;">카테고리</a>
+                <ul class="subMenu">
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">전자/IT</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">식품/영양</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">뷰티/패션</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">기타</a></li>
+                </ul>
+            </li>
+            <li><a href="#" style="text-decoration: none; color: #f6ac93;">커뮤니티</a>
+
+                <ul class="subMenu">
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">전자/IT</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">식품/영양</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">뷰티/패션</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">기타</a></li>
+                </ul></li>
+            <li><a href="#" style="text-decoration: none; color: #f6ac93;">이용 규칙</a>
+
+                <ul class="subMenu">
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">전자/IT</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">식품/영양</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">뷰티/패션</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #d4d4d4; font-family: hanna, sans-serif; font-size: 12px;">기타</a></li>
+                </ul></li>
+
+        </ul>
+    </div>
+    <hr>
+    <div id="wrap">
+        <div id="content">CONTENT</div>
+        <div id="banner">BANNER</div>
 
     </div>
 
-    <div id="content">
+    <div id="footer">FOOTER</div>
 
-    </div>
-
-    <div id="footer">
-
-    </div>
+</div>
 
 </body>
 </html>

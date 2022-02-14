@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        /*
+        $(document).ready(function(){
+
+        });
+        * */
+        $(function (){
+            // css() : 제이쿼리에서 스타일 시트 적용하기
+            // 내장객체 , 태그, 아이디, 클래스
+            // 속성, 속성값
+            $("h1").css("color", "blue").css("background-color","lightblue")
+            .css("font-family","궁서체");
+            $(".c1").css("background-color","#ddd");
+            $("img").css("border", "5px orange solid");
+            //attr : html 속성 (attribute)사용하기 , 속성과 속성값이 있는 속성을 처리할 떄
+            $("#txt").attr("type", "number").attr("value", "20");
+
+            //prop() : html의 속성중 속성 명만으로 처리되는 속성을 사용하기
+            $("#txt").prop("readonly", true);
+
+        });
+
+        // $(function (){
+        //     console.log("jquery start...");
+        // });
+    </script>
+</head>
+<body>
+<input type="text" id="txt"/>
+<h1>제이쿼리에서 html 사용하기</h1>
+<h2 class="c1">제이쿼리 테스트</h2>
+<h2 class="c1">제이쿼리 테스트</h2>
+<img src="../img/penguin.jpg"/>
+
+</body>
+</html>
