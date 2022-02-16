@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+    https://github.com/stevenwanderski/bxslider-4 에서 다운로드
+    1. jquery
+    2. easing
+    3. bxslider 스크립트
+    4. bxslider 스타일시트
+    5. images 폴더 복사
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="vendor/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.css" type="text/css">
+    <style>
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        #slider img {
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#slider").bxSlider({
+                //기본 -> 'horizontal', 'vertical', 'fade'
+                mode: 'horizontal',
+                slideWidth: 800,
+                slideHeight: 450,
+                speed: 2000,
+                auto: true, //자동시작
+                randomStart: true, // 시작 슬라이드 랜덤
+                captions: true, //title속성에 있는 설명을 표시한다.
+                // adaptiveHeight: true, //이미지의 크기에 따라 높이 조절
+                // hideControlOnEnd: true,
+
+                //easing
+                useCSS: false,
+                easing: 'easeOutElastic',
+                onSliderLoad: function () {
+                    alert("이미지 로딩 완료");
+                },
+                onSlideAfter: function () {
+                    console.log("onslider함수 실행됨");
+                },
+
+            });
+        });
+    </script>
+</head>
+<body>
+<ul id="slider">
+    <li><a href="https://www.naver.com"><img src="../../img/penguin.jpg" title="네이버"/></a></li>
+    <li><a href="https://www.naver.com"><img src="../../img/penguin.jpg" title="네이버"/></a></li>
+    <li><a href="https://www.naver.com"><img src="../../img/penguin.jpg" title="네이버"/></a></li>
+    <li><a href="https://www.naver.com"><img src="../../img/penguin.jpg" title="네이버"/></a></li>
+    <li><a href="https://www.naver.com"><img src="../../img/penguin.jpg" title="네이버"/></a></li>
+    <li><a href="https://www.naver.com"><img src="../../img/penguin.jpg" title="네이버"/></a></li>
+    <li><a href="https://www.naver.com"><img src="../../img/penguin.jpg" title="네이버"/></a></li>
+    <li><a href="https://www.naver.com"><img src="../../img/penguin.jpg" title="네이버"/></a></li>
+
+</ul>
+</body>
+</html>

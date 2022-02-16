@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //이미지에서 클릭이벤트 발생시 처리할
+            var n = 1;
+            $("img").first().on('click', function () {
+                $("body").append("<img src='../img/0"+n++ +".PNG'/>");
+                if(n>=9) n=1;
+            });
+
+            //첫번째 이미지를 자동 이벤트발생시키기
+            setInterval(function (){
+                //trigger() : 이벤트 발생시키는 함수
+                $('img:first').trigger('click');
+            },1000);
+        });
+    </script>
+    <style>
+        img {
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<img src="../img/penguin.jpg"/>
+</body>
+</html>

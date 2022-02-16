@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+        1. jquery-ui.css
+        2. jquery
+        3. jquery-ui.js
+
+    -->
+    <link rel="stylesheet" href="../jquery-ui.min.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            //다이얼 열기
+
+            //다이얼 로그 세팅
+            $("#dialog").dialog({
+                //실행시 자동 열림 설정(true, false)
+                autoOpen: true,
+
+                //buttons :
+                buttons: {
+
+                        submit: function() {
+                            var name = $("#event-name").val();
+                            var date = $("#event-date").val();
+
+                            $("#result").append("<p>"+date+":"+name+"</p>");
+                            $("#event-name").val('');
+                            $("#event-date").val('');
+                        },
+
+                    reset: function () {
+                        $("#event-name").val('');
+                        $("#event-date").val('');
+                    },
+                    close: function () {
+                        $("#event-name").val('');
+                        $("#event-date").val('');
+                        $("#dialog").dialog('close');
+                    },
+                },
+
+                //modal :
+                modal: true,
+            });
+
+            //Datepicker 세팅
+        });
+    </script>
+</head>
+<body>
+<div id="dialogOpen">일정 등록</div>
+<hr/>
+<div id="result">일정이 표시되는 곳</div>
+
+<!--다이얼 로그 창-->
+<div id="dialog" title="JQuery UI Dialog"><!--다이얼로그 창의 제목으로 사용됨-->
+    <h2>일정을 등록하세요</h2>
+    <label for="event-name">일정 이름:</label><input type="text" name="event-name" id="event-name"></br>
+    <label for="event-date">날짜 선택:</label><input type="text" name="event-date" id="event-date">
+
+
+</div>
+</body>
+</html>

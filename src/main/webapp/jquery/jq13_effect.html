@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        img{width:300px; height:400px;}
+    </style>
+    <script>
+        $(function () {
+            $("#hide").click(function () {
+                //사라진 이미지 시간
+                //폭, 높이 점점 흐리게..
+                $("#i").hide(3000);
+            });
+            $("#show").click(function () {
+                $("#i").show("slow");
+            });
+            $("#toggle").click(function () {
+                $("#i").toggle(3000);
+            });
+
+            // fadeIn() : 점점 진하게
+            $("#fadeIn").click(function () {
+                $("#i").fadeIn(3000);
+            });
+            // fadeOut() : 점점 흐리게
+            $("#fadeOut").click(function () {
+                $("#i").fadeOut(3000);
+            });
+            // fadeToggle() :
+            $("#fadeToggle").click(function () {
+                $("#i").fadeToggle(3000);
+            });
+            // slideUp*() : 슬라이드 모양으로 줄어듬
+            $("#slideUp").click(function(){
+                $("#i").slideUp(2000);
+            });
+            // slideDown()
+            $("#slideDown").click(function () {
+                $("#i").slideDown(3000);
+            });
+            // slideToggle()
+            $("#slideToggle").click(function () {
+                $("#i").slideToggle(3000);
+            });
+
+        });
+    </script>
+</head>
+<body>
+<button id="hide">숨기기(hidden)</button>
+<button id="show">보여주기(show)</button>
+<button id="toggle">toggle(toggle)</button>
+
+<button id="fadeIn">페이드인</button>
+<button id="fadeOut">페이드 아웃</button>
+<button id="fadeToggle">페이드 토글</button>
+
+<button id="slideUp">슬라이드 업</button>
+<button id="slideDown">슬라이드 다운</button>
+<button id="slideToggle">슬라이드 토글</button>
+<hr>
+<img src="../img/안녕히계세요.jpg" id="i"/>
+<img src="../img/penguin.jpg"/>
+
+</body>
+</html>
